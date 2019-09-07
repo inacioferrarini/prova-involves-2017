@@ -1,0 +1,6 @@
+framework module Pods_SeriesManagerUITests {
+  umbrella header "Pods-SeriesManagerUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

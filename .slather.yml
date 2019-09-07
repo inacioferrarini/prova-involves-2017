@@ -1,0 +1,11 @@
+
+workspace: SeriesManager.xcworkspace
+xcodeproj: SeriesManager.xcodeproj
+scheme: SeriesManager
+output_directory: slather-report
+source_directory: SeriesManager
+coverage_service: html
+ignore:
+  - Pods/*
+  - SeriesManagerTests/*
+

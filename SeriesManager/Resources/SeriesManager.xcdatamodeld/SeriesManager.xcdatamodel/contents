@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Episode" representedClassName="Episode" syncable="YES">
+        <attribute name="airDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="order" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="watched" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="owner" maxCount="1" deletionRule="Nullify" destinationEntity="Serie" inverseName="episodes" inverseEntity="Serie" syncable="YES"/>
+    </entity>
+    <entity name="Serie" representedClassName="Serie" syncable="YES">
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="year" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="episodes" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Episode" inverseName="owner" inverseEntity="Episode" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Episode" positionX="-65" positionY="3" width="128" height="118"/>
+        <element name="Serie" positionX="-63" positionY="-117" width="128" height="90"/>
+    </elements>
+</model>
